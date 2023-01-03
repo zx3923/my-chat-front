@@ -21,7 +21,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
-  "homepage": "https://zx3923.github.io/my-chat-front/",
+  "homepage": "http://zx3923.github.io/my-chat-front",
   "eslintConfig": {
     "extends": [
       "react-app",
