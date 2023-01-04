@@ -4,14 +4,19 @@ import ChatPage from "./components/ChatPage";
 import socketIO from "socket.io-client";
 import { useState } from "react";
 
-const socket = socketIO.connect("http://localhost:4000");
+const socket = socketIO.connect(
+  `https://port-0-my-chat-back-3vw25lcfwkphp.gksl2.cloudtype.app/`,
+  {
+    cors: { origin: "*" },
+  }
+);
 function App() {
   const [nameData, setNameData] = useState("");
   const parentFunction = (x) => {
     setNameData(x);
   };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div>
         <Routes>
           <Route
