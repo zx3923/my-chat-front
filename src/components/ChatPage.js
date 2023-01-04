@@ -3,7 +3,13 @@ import ChatBar from "./ChatBar";
 import ChatBody from "./ChatBody";
 import ChatFooter from "./ChatFooter";
 
-const ChatPage = ({ socket, nameData }) => {
+const ChatPage = ({
+  socket,
+  nameData,
+  setNameData,
+  changeName,
+  setChangeName,
+}) => {
   const [messages, setMessages] = useState([]);
   const [typingStatus, setTypingStatus] = useState("");
   const lastMessageRef = useRef(null);
@@ -24,10 +30,13 @@ const ChatPage = ({ socket, nameData }) => {
       <ChatBar socket={socket} />
       <div className="chat__main">
         <ChatBody
+          socket={socket}
           messages={messages}
           lastMessageRef={lastMessageRef}
           typingStatus={typingStatus}
-          nameData={nameData}
+          setNameData={setNameData}
+          changeName={changeName}
+          setChangeName={setChangeName}
         />
         <ChatFooter socket={socket} nameData={nameData} />
       </div>

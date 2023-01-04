@@ -12,6 +12,7 @@ const socket = socketIO.connect(
 );
 function App() {
   const [nameData, setNameData] = useState("");
+  const [changeName, setChangeName] = useState(nameData);
   const parentFunction = (x) => {
     setNameData(x);
   };
@@ -25,7 +26,15 @@ function App() {
           ></Route>
           <Route
             path="/chat"
-            element={<ChatPage socket={socket} nameData={nameData} />}
+            element={
+              <ChatPage
+                socket={socket}
+                nameData={nameData}
+                setNameData={setNameData}
+                changeName={changeName}
+                setChangeName={setChangeName}
+              />
+            }
           ></Route>
         </Routes>
       </div>
