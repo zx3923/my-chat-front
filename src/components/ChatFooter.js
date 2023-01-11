@@ -30,7 +30,7 @@ const ChatFooter = ({ socket, nameData }) => {
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleTyping}
         />
-        <button className="sendBtn">SEND</button>
+        <button className="sendBtn">보내기</button>
       </form>
     </div>
   );

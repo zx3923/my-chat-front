@@ -13,8 +13,8 @@ const Home = ({ socket, parentFunction }) => {
   };
   return (
     <form className="home__container" onSubmit={handleSubmit}>
-      <h2 className="home__header">Sign in to Open Chat</h2>
-      <label htmlFor="username">Username</label>
+      <h2 className="home__header">익명 채팅 방</h2>
+      <label htmlFor="username">이름</label>
       <input
         type="text"
         minLength={3}
@@ -24,7 +24,7 @@ const Home = ({ socket, parentFunction }) => {
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
       />
-      <button className="home__cta">SIGN IN</button>
+      <button className="home__cta">들어가기</button>
     </form>
   );
 };

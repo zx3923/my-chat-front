@@ -50,12 +50,21 @@ const ChatBody = ({
   return (
     <>
       <header className="chat__mainHeader">
-        <p>Hangout with Colleagues</p>
-        <button className="leaveChat__btn" onClick={handleLeaveChat}>
-          LEAVE CHAT
-        </button>
         <div>
-          <Button onClick={handleOpen}>닉변</Button>
+          <Button
+            onClick={handleOpen}
+            variant="contained"
+            style={{ margin: "10px" }}
+          >
+            이름 변경
+          </Button>
+          <Button
+            className="leaveChat__btn"
+            onClick={handleLeaveChat}
+            variant="contained"
+          >
+            나가기
+          </Button>
           <Modal
             open={open}
             onClose={handleClose}
@@ -72,8 +81,20 @@ const ChatBody = ({
                 value={changeName}
                 onChange={(e) => setChangeName(e.target.value)}
               />
-              <button onClick={nameChange}>변경</button>
-              <button onClick={handleClose}>닫기</button>
+              <Button
+                onClick={nameChange}
+                variant="contained"
+                style={{ marginLeft: "10px" }}
+              >
+                변경
+              </Button>
+              <Button
+                onClick={handleClose}
+                variant="contained"
+                style={{ marginLeft: "10px" }}
+              >
+                닫기
+              </Button>
             </Box>
           </Modal>
         </div>

@@ -43,7 +43,7 @@
 }
 .chat__sidebar {
   height: 100%;
-  background-color: #f9f5eb;
+  /* background-color: #f9f5eb; */
   flex: 0.2;
   padding: 20px;
   border-right: 1px solid #fdfdfd;
@@ -72,21 +72,22 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #f9f5eb;
+  /* background-color: #f9f5eb; */
 }
-.leaveChat__btn {
+/* .leaveChat__btn {
   padding: 10px;
-  width: 150px;
+  width: 120px;
   border: none;
   outline: none;
   background-color: #d1512d;
   cursor: pointer;
-  color: #eae3d2;
-}
+  color: white;
+  border-radius: 5px;
+} */
 .message__container {
   width: 100%;
   height: 80vh;
-  background-color: #fff;
+  background-color: #b2c7d9;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -96,7 +97,7 @@
 }
 .chat__footer {
   padding: 10px;
-  background-color: #f9f5eb;
+  /* background-color: #f9f5eb; */
   height: 10vh;
 }
 .form {
@@ -116,25 +117,25 @@
 }
 .sendBtn {
   width: 150px;
-  background-color: green;
+  background-color: #fee500;
   padding: 10px;
   border: none;
   outline: none;
-  color: #eae3d2;
+  color: black;
   cursor: pointer;
 }
 .sendBtn:hover {
-  background-color: rgb(129, 201, 129);
+  background-color: #fff48f;
 }
 .message__recipient {
-  background-color: #f5ccc2;
+  background-color: white;
   width: 300px;
   padding: 10px;
   border-radius: 10px;
   font-size: 15px;
 }
 .message__sender {
-  background-color: rgb(194, 243, 194);
+  background-color: #fee500;
   max-width: 300px;
   padding: 10px;
   border-radius: 10px;
